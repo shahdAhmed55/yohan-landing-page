@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 991px) {
+  .container {
+    width: 980px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  height: 100vh;
+  overflow: hidden;
+}
+.header .navbar {
+  position: relative;
+  background-color: black;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px red;
+}
+.header .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbar .container .listnav:hover ul {
+  right: 0;
+}
+.header .navbar .container .listnav .links {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: transparent;
+}
+.header .navbar .container .listnav .links span {
+  width: 100%;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: white;
+  z-index: 10;
+}
+.header .navbar .container .listnav .list {
+  background-image: url(./images/list.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 30%;
+  background-color: black;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  transition: 1.2s;
+}
+.header .navbar .container .listnav .list li {
+  margin-bottom: 30px;
+}
+.header .navbar .container .listnav .list li a {
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header .navbar .container .listnav .list li a:hover {
+  transition: 0.5s;
+  margin-right: -20px;
+}
+.header .page1 {
+  background-image: url(./images/wp11662064-johan-monster-wallpapers.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 70px);
+}
+.header .page1 .container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+.header .page1 .container .text h2 {
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.header .page1 .container .text h2 span {
+  font-size: 45px;
+  color: white;
+  text-shadow: none;
+  -webkit-text-stroke: 2px red;
+  -webkit-text-fill-color: transparent;
+}
+.header .page1 .container .text h2 span .T {
+  -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color: red;
+}
+.header .page1 .container .text button {
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: bolder;
+  color: white;
+  background-color: red;
+  box-shadow: 0 0 5px red, 0 0 10px black;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.header .page1 .container .text button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -15px;
+  height: 100%;
+  width: 10px;
+  background-color: red;
+  box-shadow: 0 0 5px red, 0 0 10px black;
+  transition: 0.5s;
+}
+.header .page1 .container .text button:hover::after {
+  right: -5px;
+  box-shadow: none;
+}
+.header .page1 .container .boximgs {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 20px 10px red;
+  border-radius: 20px;
+}
+.header .page1 .container .boximgs .imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: absolute;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  animation: run 20s infinite linear;
+  top: 0;
+}
+.header .page1 .container .boximgs .imgs img {
+  width: 230px;
+  animation-delay: -10;
+  height: 100%;
+}
+
+@keyframes run {
+  100% {
+    left: -600px;
+  }
+}
+@keyframes text {}
+@media (max-width: 992px) {
+  .header .navbar .container {
+    width: 100%;
+  }
+  .header .navbar .container .listnav .list {
+    width: 80%;
+  }
+  .header .page1 .container {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .header .page1 .container .boximgs {
+    width: 100%;
+    height: 350px;
+  }
+}/*# sourceMappingURL=main.css.map */
